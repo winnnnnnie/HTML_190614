@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>localStorage & sessionStorage</h3>
+    <p><a href="https://www.w3schools.com/html/html5_webstorage.asp">w3c web storage</a></p>
+
+    <h3>cookie</h3>
+    <p><a href="https://www.w3schools.com/js/js_cookies.asp">w3c cookie</a></p>
+
+    <!-- localStorage -->
+    <label for="drink">飲料品項：</label>
+    <select id="drink" name="drinkList">
+        <optgroup label="Tea">茶類</optgroup>
+        <option value="GreenTea">綠茶</option>
+        <option value="BlackTea">紅茶</option>
+        <option value="MilkTea">奶茶</option>
+        <optgroup label="Coffee">咖啡</optgroup>
+        <option value="Latte">拿鐵</option>
+        <option value="FlatWhite">馥列白</option>
+    </select>
+    <p><button onclick="addCar()" type="button">加入購物車</button></p>
+
+    <hr>
+
+    <!-- sessionStorage -->
+    <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+    <div id="result"></div>
+    <p>Click the button to see the counter increase.</p>
+    <p>Close the browser tab (or window), and try again, and the counter is reset.</p>
+
+    <!-- localStorage -->
+    <script>
+        function addCar() {
+            // 要先確認瀏覽器是否可以使用 
+            if (typeof (Storage) !== "undefined") {
+                
+                // javascript的寫法
+                var e = document.getElementById("drink");
+                var item = e.options[e.selectedIndex].value;
+                
+                localStorage.setItem("carItem"+item, item);
+
+                // 透過 log 查看，也可以透過 chrome > 右鍵 > 檢查 > Appliction 查看
+                console.log(localStorage.getItem("item"));
+                
+                // 底下這兩種方法也可以
+                // localStorage["Key名稱"] = "字串值";
+                // localStorage.Key名稱 = "字串值"; 
+            } else {
+                // Sorry! No Web Storage support..
+                alert("Sorry, your browser does not support Web Storage...");
+            }
+        }
+    </script>
+
+    <!-- sessionStorage -->
+    <script>
+        function clickCounter() {
+            if (typeof (Storage) !== "undefined") {
+                if (sessionStorage.clickcount) {
+                    // Number() 將字串轉成數值的一種方法
+                    sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+                } else {
+                    sessionStorage.clickcount = 1;
+                }
+                document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage
+                    .clickcount + " time(s) in this session.";
+            } else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery的使用和css選擇器補充</title>
+
+    <!-- 1. 使用jQuery前，記得要先引用進來 -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <script>
+        // 前言：jQuery是用選擇的方式，找到網頁裡面的元素
+        // 2. 選擇 body 附加(append) 1 個 table 元素  
+
+        // 3. 選擇 table 附加(append) 6 個 tr 元素
+
+        // 4. 選擇 tr 元素，每一列 (each) 都加入 7 個 td 元素 【 each 若傳入 index，可獲得當前巡覽的位置】
+        //    透過 append() 方法，幫每一列都加入 10 個 td，且 id 命名為 row+第幾列+col+第幾欄，例如 row0col0 為 表格左上角的第一個位置
+
+        // 5. 選擇 table 設定樣式 (css) 文字置中 text-align: center
+
+        // 6. 選擇第一列作為標題列，在第一列中找到每一個 td, 搭配weekList陣列 ,修改文字(text)為星期
+        var weekList = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+
+        // 7. 取得2019/5/1的時間日期物件
+
+        // 8. 查看5月份的最後一天是幾號 (先將月份+1→設定日期為1號→再將日期-1)
+
+        // 9. 重新設定時間日期物件為1號，並記錄是星期幾
+
+        // 10. 新增一個變數，紀錄日期
+
+        // 11. 從第二列開始，設定日期
+
+        // 12. 需要判斷：第一天要從哪個位置開始放? → 第一列的某個指定位置
+
+        // 13. 把星期六和星期天的 背景底色 設定為 pink
+
+        // 14. 第二列開始，每隔兩列 (2n+2) 把 文字顏色 改為 yellowgreen
+
+    </script>
+
+</body>
+
+</html>

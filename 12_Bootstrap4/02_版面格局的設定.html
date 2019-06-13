@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <!-- 瀏覽器網址圖示 -->
+  <link rel="icon" href="http://placehold.it/16x16.png?text=X" type="image/png">
+  
+  <title>Bootstrap</title>
+
+  <!-- 如何選取到基數列和偶數列的元素 -->
+</head>
+
+<body>
+
+  <!-- 導覽列 -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- .navbar-brand 左上角LOGO -->
+    <a class="navbar-brand" href="#">
+      <img src="http://placehold.it/50x50?text=brand" alt="">
+    </a>
+    <!-- .navbar-toggler 漢堡選單 & nav.navbar-expand-lg 決定漢堡選單出現時機 -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- .collapse.navbar-collapse 用於外層中斷點群組和隱藏導覽列內容 -->
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <!-- .向右推兩個項目（.mr-auto），並向左推兩個項目（.ml-auto） => https://bootstrap.hexschool.com/docs/4.0/utilities/flex/ -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <!-- .dropdown Navbar選項使用下拉式選單 -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">v4.3</a>
+          <!-- .dropdown-menu 下拉選單內容 -->
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">v4.2</a>
+            <a class="dropdown-item" href="#">v4.0</a>
+            <a class="dropdown-item" href="#">v3.0</a>
+            <a class="dropdown-item" href="#">v2.0</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><img src="http://placehold.it/30x30?text=icon" alt=""></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><img src="http://placehold.it/30x30?text=icon" alt=""></a>
+        </li>
+      </ul>
+      <!-- .btn-outline-warning 只有邊線的按鈕 -->
+      <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Download
+      </button>
+  </nav>
+
+  <!-- 導覽列下的說明，<main>是語意標籤，表示網頁的主要內容；http://shoelace.io；可輔助排版畫面 -->
+  <main>
+    <!-- .container 固定寬度 或 .container-fluid 滿版  -->
+    <div class="container">
+      <div class="row">
+        <!-- 請參考 調整版面測試.png -->
+        <div class="col-sm-6 col-md-4 col-lg-2">A</div>
+        <div class="col-sm-6 col-md-8 col-lg-2">B</div>
+        <div class="col-sm-6 col-md-8 col-lg-2">C</div>
+        <div class="col-sm-6 col-md-4 col-lg-2">D</div>
+        <div class="col-sm-6 col-md-4 col-lg-2">E</div>
+        <div class="col-sm-6 col-md-8 col-lg-2">F</div>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

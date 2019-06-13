@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Angular</title>
+  <!-- 載入 angular 框架 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<!-- ng-app 定義 angular可以使用的範圍，正常來說，一個頁面只會有一個 -->
+<body ng-app="">
+  <p><a href="https://www.w3schools.com/angular/default.asp">w3c angular說明文件(範例來源)</a></p>
+
+  <div>
+    <p>Input something in the input box:</p>
+    <p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
+    <!-- 這是 angular的表示式，如果再 angular 可以使用的範圍，這一段才有作用 {{ expression }} -->
+    <h1>Hello {{name}}</h1>
+  </div>
+
+  <!-- ng-init 可以定義變數的初始值 -->
+  <div ng-init="firstName='w3schools'">
+    <!-- ng-bind 綁定變數名稱 -->
+    <p>The name is <span ng-bind="firstName"></span></p>
+  </div>
+
+</body>
+
+</html>

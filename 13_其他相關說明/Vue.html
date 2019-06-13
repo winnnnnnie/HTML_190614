@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+  <!-- 開發環境版本：有註解，檔案比較大 -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+
+  <!-- 生產環境版本：沒有註解，檔案較小 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+</head>
+
+<body>
+  <p><a href="https://cn.vuejs.org/v2/guide/index.html">Vue 官網</a></p>
+
+  <!-- 設定id讓vue叫用 -->
+  <div id="app">
+    <h1>{{ msg }}</h1>
+  </div>
+
+  <script>
+    // 新增一個Vue物件
+    var myObject = new Vue({
+      // 選擇畫面上的元素
+      el: '#app',
+      // data 設定資料
+      data: {
+        msg: 'Hello Vue!'
+      }
+    })
+  </script>
+</body>
+
+</html>

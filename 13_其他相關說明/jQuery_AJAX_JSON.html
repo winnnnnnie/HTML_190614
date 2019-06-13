@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>ajax & JSON</title>
+</head>
+
+<body>
+
+<script>
+    // 為了查看非同步，所以在這邊加log
+    console.log("<body>");
+  </script>
+
+  <h4>AJAX 是 Asynchronous JavaScript and XML，一種非同步請求的方法</h4>
+
+
+
+  <!-- 練習步驟1：試著定義一個table，標題為 展覽標題 & 展覽價錢，並套用 bootstrap4 針對table的樣式 -->
+
+
+
+  <!-- 使用別人的函式庫或架構，必須在使用前引用 -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <!-- 範例來源網址：https://ithelp.ithome.com.tw/articles/10207897?sc=iThelpR -->
+  <script>
+    // 不透過 jQuery.ajax()，直接以 XMLHttpRequest 物件協助我們取得資料的網址
+    var openUrl = "https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=6";
+    // 宣告一個 XMLHttpRequest 物件協助我們向資料進行請求
+    var xhr = new XMLHttpRequest();
+    // open方法需要傳入 (方法, 資料網址, 是否不需同步)
+    xhr.open('GET', openUrl, true);
+    // 送出請求
+    xhr.send();
+    // 當狀態改變時，執行動作
+    // readyState 代表狀態 ==> 0:未開始、1:讀取中、2:已讀取、3:資訊交換中、4:完成
+    // status 代表 HTTP 狀態碼 ==> 200 表示 ok
+    xhr.onreadystatechange = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        // 透過 JSON.parse 方法，將一串文字，轉成JSON格式
+        var data = JSON.parse(this.responseText);
+        console.log(data);
+      }
+    };
+
+    console.log("這是script和script執行的中間");
+
+    // 改以jQuery.ajax()的寫法
+    $.ajax({
+      url: 'https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=6',
+      // type 行為 例如 GET、PUT、POST、DELETE
+      type: 'get',
+      dataType: "json",
+      error: function (xhr) {
+        alert('Ajax request 發生錯誤');
+      },
+      success: function (data) {
+        let rows = "";
+        for (var x = 0; x < data.length; x++) {
+
+
+
+          // 練習步驟2：可以先透過一些瀏覽JSON格式的工具，查閱資料(postman或者線上網頁)；底下查看資料後，取得需要的資料使用
+
+
+        }
+
+
+        // 練習步驟3：將資料顯示在畫面上
+
+      }
+    });
+  </script>
+
+  <script>
+    // 為了查看非同步，所以在這邊加log
+    console.log("</body>");
+  </script>
+</body>
+
+</html>
