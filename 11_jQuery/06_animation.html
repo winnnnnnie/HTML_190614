@@ -21,13 +21,39 @@
 
     <script>
         // 1.先讓圖片可以移動
+        // $(function () {
+        //     $("#startMove").click(function () {
+        //         $("img").css("position", "relative");
+        //         // $("img").css("top", (Math.random() * 300) + "px");
+        //         $("img").each(function () {
+        //             $(this).css("top", (Math.random() * 300) + "px");
 
+        //         });
+        //     });
+
+
+
+        // });
         // 2.讓圖片移動的數值不固定
 
         // 3.讓圖片有自己的亂數設定 .each()
 
         // 4.讓圖片有滑動的效果
 
+        $(function () {
+            $("#startMove").click(function () {
+                $("img").css("position", "relative");
+                $("img").each(function () {
+                    // $(this).css("top", (Math.random() * 300) + "px");
+                    $(this).animate({
+                        top: (Math.random() * 300) + "px",
+                        left: (Math.random() * 300) + "px"
+
+                    }, 800);
+                });
+            });
+
+        });
         // 5.讓圖片自己動起來吧
     </script>
 </body>
