@@ -16,6 +16,18 @@
   <title>Bootstrap</title>
 
   <!-- 如何選取到基數列和偶數列的元素 -->
+
+  <style>
+    div[ class^="col-"]:nth-child(odd){
+         background-color: aqua;
+         height: 300px;
+    }
+    div[ class^="col-"]:nth-child(even){
+         background-color: rebeccapurple;
+         height: 300px;
+    }
+  </style>
+
 </head>
 
 <body>
